@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bm2d8byrfijd"]
+
+[ext_resource type="Script" uid="uid://bt85tfjoyu8r0" path="res://scripts/dialogue_i_u.gd" id="1_dxsxk"]
+[ext_resource type="Texture2D" uid="uid://6gvtuvvcwptw" path="res://assets/ui/47_panel_dialogo.png" id="2_wo03i"]
+
+[node name="Dialogue UI" type="CanvasLayer" unique_id=1480569447]
+script = ExtResource("1_dxsxk")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=275235027]
+offset_left = 220.0
+offset_top = 520.0
+offset_right = 920.0
+offset_bottom = 605.0
+offset_transform_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=1579759072]
+layout_mode = 2
+texture = ExtResource("2_wo03i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1670679282]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=39306798]
+modulate = Color(1.1730844, 1.1730844, 1.1730844, 1)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(150, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Han solo"
+
+[node name="DialogueLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=459177865]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(150, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Welcome Sir"
+autowrap_mode = 3
+
+[node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=230330637]
+layout_mode = 2
+text = "contunie.."
