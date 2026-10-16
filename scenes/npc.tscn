@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cupcs0cyv5xk7"]
 
+[ext_resource type="Script" uid="uid://caaun4uno1d1s" path="res://scripts/npc.gd" id="1_abqhh"]
 [ext_resource type="Texture2D" uid="uid://dn5s0tb1enjbp" path="res://assets/npc/npc.png" id="1_nh2m4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abqhh"]
@@ -42,9 +43,9 @@ animations = [{
 radius = 22.0
 height = 76.0
 
-[node name="NPC" type="Area2D" unique_id=106070666]
+[node name="NPC" type="Node2D" unique_id=166610703]
 scale = Vector2(0.7, 0.7)
-collision_layer = 0
+script = ExtResource("1_abqhh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1215978376]
 sprite_frames = SubResource("SpriteFrames_5aq51")
@@ -52,6 +53,9 @@ animation = &"idle"
 frame = 1
 frame_progress = 0.7557339
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329018263]
-position = Vector2(-3, 4)
+[node name="interactiveArea" type="Area2D" parent="." unique_id=43760095]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactiveArea" unique_id=1329018263]
+position = Vector2(-2.9999998, 3.9999993)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("CapsuleShape2D_iupvx")

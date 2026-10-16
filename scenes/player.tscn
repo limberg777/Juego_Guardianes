@@ -1,17 +1,31 @@
 [gd_scene format=3 uid="uid://de843tvbw3dn4"]
 
 [ext_resource type="Script" uid="uid://fs7jejdxbd4b" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dpfd8otqqo6rv" path="res://assets/characters/character.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://b6hblk4s0vuix" path="res://assets/characters/21_personaje_caminar.png" id="2_g2els"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
-atlas = ExtResource("2_dqkch")
-region = Rect2(0, 0, 61, 77)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(10, 0, 48, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_g2els")
+region = Rect2(59, 0, 44, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_g2els")
+region = Rect2(104, 0, 52, 115)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ci2qi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g2els")
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
 }],
 "loop": 1,
 "name": &"idle",
@@ -19,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uy22x"]
-radius = 40.0
+radius = 54.00926
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
 radius = 16.0
@@ -34,6 +48,8 @@ position = Vector2(0, -4.7683716e-07)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ci2qi")
 animation = &"idle"
+frame = 1
+frame_progress = 0.23254032
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=60840998]
 

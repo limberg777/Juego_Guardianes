@@ -20,8 +20,8 @@ func show_dialogue(charater_name: String, dialogues: Array[String]) -> void:
 	current_dialogues = dialogues
 	dialogue_index = 0 
 	is_open = true
-	
 	name_label.text = charater_name
+	dialogue_label.text = dialogues[0]
 	panel.show()
 	
 func next_dialogue()-> void:
@@ -37,4 +37,6 @@ func close_dialogue() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if is_open and Input.is_action_just_pressed("interact"):
+		next_dialogue()
 	pass

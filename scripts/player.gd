@@ -31,6 +31,7 @@ func _physics_process(_delta: float) -> void:
 	attack_timer = maxf(attack_timer - _delta, 0.0)
 	if Input.is_action_just_pressed("player_attack"):
 		attack()
+		print("¡PRESIONÉ ATAQUE!")
 
 	var direction := Input.get_vector(
 		"move_left",
